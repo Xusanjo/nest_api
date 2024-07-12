@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { SequelizeModule } from "@nestjs/sequelize"
 import { FailsController } from './fails/fails.controller';
 import { FailsModule } from './fails/fails.module';
+import { KursFaillariModule } from './kurs_faillari/kurs_faillari.module';
+import { KurslarModule } from './kurslar/kurslar.module';
 
 
 @Module({
@@ -23,6 +25,8 @@ import { FailsModule } from './fails/fails.module';
       // logging: true // Set to true if you want to see SQL queries logged
     }),
     FailsModule,
+    KursFaillariModule,
+    KurslarModule,
     ],
   controllers: [FailsController],
   providers: [],
